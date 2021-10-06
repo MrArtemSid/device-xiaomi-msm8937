@@ -10,7 +10,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/beryllium.mk
+    $(LOCAL_DIR)/mi8937.mk
 
 COMMON_LUNCH_CHOICES := \
-    beryllium-userdebug
+    mi8937-userdebug
