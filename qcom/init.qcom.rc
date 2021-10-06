@@ -19,7 +19,7 @@ service tqftpserv /vendor/bin/tqftpserv
     disabled
     oneshot
 
-service rmtfs /vendor/bin/rmtfs -o /dev/block/platform/soc@0/1d84000.ufshc/by-name -P -r -s
+service rmtfs /vendor/bin/rmtfs -o /dev/block/platform/soc/7824900.sdhci/by-name -P -r -s
     class core
     user root
     group system

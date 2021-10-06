@@ -15,7 +15,7 @@
 #
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/xiaomi/beryllium
+    device/xiaomi/msm8937
 
 # copied from crosshatch
 # setup dalvik vm configs
@@ -23,17 +23,17 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 
 PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_RAMDISK)/fstab.beryllium \
-    $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.beryllium \
-    device/xiaomi/beryllium/init.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.beryllium.rc \
-    device/xiaomi/beryllium/init.common.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.beryllium.usb.rc \
-    device/xiaomi/beryllium/common.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/beryllium.kl
+    $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_RAMDISK)/fstab.msm8937 \
+    $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.msm8937 \
+    device/xiaomi/msm8937/init.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.msm8937.rc \
+    device/xiaomi/msm8937/init.common.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.msm8937.usb.rc \
+    device/xiaomi/msm8937/common.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/msm8937.kl
 
 # Build generic Audio HAL
-PRODUCT_PACKAGES := audio.primary.beryllium
+PRODUCT_PACKAGES := audio.primary.msm8937
 
 # Build generic lights HAL
-PRODUCT_PACKAGES += lights.beryllium
+PRODUCT_PACKAGES += lights.msm8937
 
 PRODUCT_PACKAGES += \
     pd-mapper \
@@ -44,4 +44,4 @@ PRODUCT_PACKAGES += \
     tqftpserv
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/beryllium/qcom/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qcom.rc
+    device/xiaomi/msm8937/qcom/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qcom.rc

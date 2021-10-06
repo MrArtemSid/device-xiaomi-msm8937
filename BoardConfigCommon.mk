@@ -15,14 +15,15 @@
 
 # Primary Arch
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-2a
-TARGET_CPU_VARIANT := kryo385
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Secondary Arch
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
-TARGET_2ND_CPU_VARIANT := kryo385
+TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 
@@ -57,11 +58,11 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HAVE_BLUETOOTH := true
 
 BOARD_SEPOLICY_DIRS += \
-    device/xiaomi/beryllium/sepolicy \
+    device/xiaomi/msm8937/sepolicy \
     system/bt/vendor_libs/linux/sepolicy
 
-DEVICE_MANIFEST_FILE := device/xiaomi/beryllium/manifest.xml
-DEVICE_MATRIX_FILE := device/xiaomi/beryllium/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := device/xiaomi/msm8937/manifest.xml
+DEVICE_MATRIX_FILE := device/xiaomi/msm8937/compatibility_matrix.xml
 
 # Enable dex pre-opt to speed up initial boot
 ifeq ($(HOST_OS),linux)
