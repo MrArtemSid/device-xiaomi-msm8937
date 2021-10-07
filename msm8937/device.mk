@@ -23,6 +23,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 
 PRODUCT_COPY_FILES := \
+    device/xiaomi/msm8937/prebuilt-kernel/Image.gz-dtb:kernel \
     $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_RAMDISK)/fstab.msm8937 \
     $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.msm8937 \
     device/xiaomi/msm8937/init.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.msm8937.rc \
